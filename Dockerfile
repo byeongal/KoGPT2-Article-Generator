@@ -22,7 +22,7 @@ COPY . /kogpt2_article
 
 RUN rm /kogpt2_article/KoGPT2_checkpoint/KoGPT2_checkpoint.tar
 
-RUN wget -O /kogpt2_article/KoGPT2_checkpoint/KoGPT2_checkpoint.tar https://github.com/bakjiho/KoGPT2-Article-Generator/raw/master/KoGPT2_checkpoint/KoGPT2_checkpoint.tar
+RUN wget -O /kogpt2_article/KoGPT2_checkpoint/KoGPT2_checkpoint.tar http://download.louissoft.kr/KoGPT2_checkpoint.tar
 
 RUN cd /kogpt2_article && python3 /kogpt2_article/run.py
 
