@@ -20,6 +20,8 @@ RUN cd /kogpt2_article/KoGPT2 && pip3 install .
 
 COPY . /kogpt2_article
 
+RUN cd /kogpt2_article/KoGPT2_checkpoint && wget https://github.com/bakjiho/KoGPT2-Article-Generator/raw/master/KoGPT2_checkpoint/KoGPT2_checkpoint.tar
+
 RUN cd /kogpt2_article && python3 run.py
 
 CMD cd /kogpt2_article && python3 run.py
