@@ -1,0 +1,69 @@
+<HTML>
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>KoGPT2-Article-Generator<</title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class="jumbotron mt-3">
+
+                <h1>KoGPT2-Article-Generator</h1>
+                <h3>Generate articles based on start word</h3>
+                <A>GitHub repository : </A> <A href="https://github.com/ha-mulan/gpt2-food-reviews"> gpt2-food-reviews repo</A>
+                <br>
+                <A>Open API : </A> <A href="https://ainize.ai/ha-mulan/gpt2-food-reviews"> on Ainize </A>
+
+                <hr class="solid">
+
+                <h2>How to use</h2>
+                <div id="usage">
+                    <p>1. Input article start word</p>
+                    <p>2. Press the Run button and wait for about 3 seconds to get the result.</p>
+                </div>
+
+
+                <hr class="solid">
+                <h2>Example</h2>
+                <div id="usage">
+                  <h5>If start word is '정부는'  you can checkout the result like this</h5>
+                </div>
+                <hr class="solid">
+                <p>
+                정부는 페트로가 출시된 이후 유동성을 공급하기 위해 노력해왔다. 베르너는 디젤게이트 사태 해결을 위해 노력한 통해 터져 주목된다. 베트남 주식과 같은 차량 구상이 가능하다. 베엠후스가 직면한 공급망 문제 해결을 위해 돈지로 대상으로 한 달 만에 순유출
+                <br/><br/></p>
+
+                <hr class="solid">
+                <h2>Make your own articles </h2>
+                <p>Please enter start word</p>
+                <input id='review'>
+                <button onclick='printName()'>RUN</button>
+                <p></p>
+                <script type="text/javascript">
+                 function printName()  {
+                   const review = document.getElementById('review').value;
+
+                   fetch('/api?start_msg='+review).then(function(response){
+                     response.text().then(function(text){
+                       document.getElementById("result").innerText = text;
+                     })
+                   })
+                 }
+               </script>
+                  <hr class="solid">
+                <h2>Your generated article</h2>
+                  <hr class="solid">
+                <div id='result'></div>
+
+    </div>
+            </div>
+        </div>
+    </body>
+</HTML>
