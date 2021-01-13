@@ -50,7 +50,7 @@ def dataset (file_path):
 
 model, vocab = get_pytorch_kogpt2_model()
 
-load_path = './KoGPT2_checkpoint/KoGPT2_checkpoint.tar'
+load_path = 'KoGPT2_checkpoint/KoGPT2_checkpoint.tar'
 checkpoint = torch.load(load_path, map_location=torch.device(PU))
 
 model.to(torch.device(PU)) #모델 연산 유닛 설정
@@ -61,7 +61,7 @@ model.eval()
 
 del model
 
-save_path = './KoGPT2_checkpoint/'
+save_path = 'KoGPT2_checkpoint/'
 
 kogpt2_config = {
     "initializer_range": 0.02,
