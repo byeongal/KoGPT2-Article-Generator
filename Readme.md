@@ -1,5 +1,6 @@
 # KoGPT2 Article Generator
-[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/bakjiho/GPT2-Colloquial-Large)
+[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/bakjiho/KoGPT2-Article-Generator)
+
 
 
 KoGPT2 Article Generator
