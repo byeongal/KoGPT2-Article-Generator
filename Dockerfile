@@ -25,4 +25,5 @@ RUN rm /kogpt2_article/KoGPT2_checkpoint/KoGPT2_checkpoint.tar
 
 RUN wget -O /kogpt2_article/KoGPT2_checkpoint/KoGPT2_checkpoint.tar http://download.louissoft.kr/KoGPT2_checkpoint.tar
 
+RUN COPY ./kogpt2_news_wiki_ko_cased_818bfa919d.spiece /kogpt2_article/kogpt2_news_wiki_ko_cased_818bfa919d.spiece
 CMD cd /kogpt2_article && python3 /kogpt2_article/run.py

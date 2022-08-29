@@ -32,7 +32,7 @@ else:
 
 def dataset (file_path):
   data = []
-  tokenizer = SentencepieceTokenizer(get_tokenizer())
+  tokenizer = SentencepieceTokenizer(get_tokenizer("/kogpt2_article/kogpt2_news_wiki_ko_cased_818bfa919d.spiece"))
   f = open(file_path,'r',encoding='utf-8')
 
   while True:
