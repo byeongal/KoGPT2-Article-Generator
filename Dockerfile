@@ -12,7 +12,8 @@ RUN pip3 install Flask
 
 RUN mkdir /kogpt2_article
 
-RUN cd /kogpt2_article && git clone https://github.com/SKT-AI/KoGPT2.git
+#https://github.com/SKT-AI/KoGPT2/tree/7fe98b54cf2c12ab6ba7fac1e1aa7c87e93790c4
+RUN cd /kogpt2_article && git clone https://github.com/SKT-AI/KoGPT2.git && cd KoGPT2 && git reset --hard 7fe98b54cf2c12ab6ba7fac1e1aa7c87e93790c4
 
 RUN cd /kogpt2_article/KoGPT2 && pip3 install -r requirements.txt
 
